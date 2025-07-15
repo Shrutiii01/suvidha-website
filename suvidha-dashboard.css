@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #fdf6f0;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ede7f6;
+    padding: 1rem 2rem;
+    border-bottom: 2px dotted #c5b5e7;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .top-left {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a1b9a;
+  }
+  
+  .top-nav a {
+    margin: 0 0.8rem;
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: 500;
+  }
+  
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .material-icons, .mode-btn {
+    cursor: pointer;
+    color: #6a1b9a;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .user-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #b39ddb;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 180px;
+    height: calc(100% - 72px);
+    background: #f3e5f5;
+    padding: 1rem;
+    border-right: 1px solid #e0c3fc;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin: 1.2rem 0;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: 500;
+  }
+  
+  .sidebar a:hover {
+    color: #4a148c;
+  }
+  
+  .main-dashboard {
+    margin-left: 200px;
+    padding: 2rem;
+    flex-grow: 1;
+  }
+  
+  .top-summary {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .box {
+    background: #fff;
+    border: 1px dashed #d1c4e9;
+    border-radius: 12px;
+    padding: 1rem;
+    flex: 1;
+    min-width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .quantity-info {
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .summary-box {
+    background: #fff0f9;
+    border: 1px solid #f8bbd0;
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 350px;
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .product-details, .top-products, .sales-status {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid #b39ddb;
+  }
+  
+  .product-details ul {
+    margin-top: 1rem;
+    line-height: 1.8;
+  }
+  
+  .red {
+    color: #d32f2f;
+    font-weight: 600;
+  }
+  
+  .orange {
+    color: #ef6c00;
+    font-weight: 600;
+  }
+  
+  .top-products p,
+  .sales-status p {
+    margin-top: 0.5rem;
+  }
+  
+  /* CHATBOT */
+  .chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    background: #6a1b9a;
+    color: white;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  
+  .chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 280px;
+    max-height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  .chatbot.active {
+    display: flex;
+  }
+  
+  .chat-header {
+    background: #6a1b9a;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .chat-window {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+  
+  .chatbot input {
+    border: none;
+    padding: 0.75rem;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  /* DARK MODE */
+  body.dark-mode {
+    background: #1f1f1f;
+    color: #eee;
+  }
+  
+  body.dark-mode .topbar {
+    background: #333;
+    border-bottom-color: #555;
+  }
+  
+  body.dark-mode .top-nav a,
+  body.dark-mode .top-left,
+  body.dark-mode .material-icons,
+  body.dark-mode .sidebar a {
+    color: #f0e6ff;
+  }
+  
+  body.dark-mode .sidebar {
+    background: #2b2b2b;
+  }
+  
+  body.dark-mode .box,
+  body.dark-mode .summary-box,
+  body.dark-mode .product-details,
+  body.dark-mode .top-products,
+  body.dark-mode .sales-status,
+  body.dark-mode .chatbot {
+    background: #2e2e2e;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .chat-header {
+    background: #444;
+  }
+  
+  /* EXISTING STYLES SAME AS BEFORE — ONLY DARK MODE SECTION UPDATED BELOW */
+  
+  body.dark-mode {
+    background: #0d1117;
+    color: #e2e8f0;
+  }
+  
+  body.dark-mode .topbar {
+    background: #161b22;
+    border-bottom: 2px solid #21262d;
+  }
+  
+  body.dark-mode .top-nav a,
+  body.dark-mode .top-left,
+  body.dark-mode .material-icons,
+  body.dark-mode .sidebar a {
+    color: #c9d1d9;
+  }
+  
+  body.dark-mode .sidebar {
+    background: #161b22;
+    border-right: 1px solid #30363d;
+  }
+  
+  body.dark-mode .box,
+  body.dark-mode .summary-box,
+  body.dark-mode .product-details,
+  body.dark-mode .top-products,
+  body.dark-mode .sales-status {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+  }
+  
+  body.dark-mode .chatbot {
+    background: #1f2937;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+  }
+  
+  body.dark-mode .chat-header {
+    background: #273549;
+    color: #cbd5e1;
+  }
+  
+  body.dark-mode .chatbot input {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-top: 1px solid #334155;
+  }

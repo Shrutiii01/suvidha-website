@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suvidha Order Management</title>
+  <link rel="stylesheet" href="suvidha-dashboard.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script defer>
+    function toggleChatbot() {
+      document.querySelector('.chatbot').classList.toggle('active');
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-left">Suvidha</div>
+    <nav class="top-nav">
+      <a href="working.html">Features</a>
+      <a href="working.html">Solutions</a>
+      <a href="working.html">Pricing</a>
+      <a href="working.html">Customers</a>
+      <a href="working.html">Integrations</a>
+      <a href="working.html">Resources</a>
+    </nav>
+    <div class="top-right">
+      <button onclick="toggleMode()" class="mode-btn">🌗</button>
+      <span class="material-icons">settings</span>
+      <span class="material-icons">notifications</span>
+      <img src="https://i.ibb.co/2kRrYg4/user-icon.png" alt="User" class="user-img">
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <ul>
+      <li><a href="Index.html">📊 Dashboard</a></li>
+      <li><a href="working.html">📦 Inventory</a></li>
+      <li><a href="working.html">💸 Sales</a></li>
+      <li><a href="working.html">🛍 Purchases</a></li>
+      <li><a href="working.html">🔌 Integrations</a></li>
+      <li><a href="working.html">🛰 Active Channels</a></li>
+      <li><a href="working.html">📄 Reports</a></li>
+      <li><a href="working.html">📂 Documents</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-dashboard">
+    <section class="top-summary">
+      <div class="box">📦 <strong>228</strong><br>To be Packed</div>
+      <div class="box">🚚 <strong>6</strong><br>To be Shipped</div>
+      <div class="box">📬 <strong>10</strong><br>To be Delivered</div>
+      <div class="box">🧾 <strong>474</strong><br>To be Invoiced</div>
+    </section>
+
+    <section class="quantity-info">
+      <div class="summary-box">
+        <p><strong>Quantity on Hand:</strong> 10,458</p>
+        <p><strong>Quantity to be Received:</strong> 168</p>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="product-details">
+        <h3>📦 Product Details</h3>
+        <ul>
+          <li><span class="red">Low Stock Items:</span> 3</li>
+          <li>All Item Group: 39</li>
+          <li>Total Items: 190</li>
+          <li class="orange">Unconfirmed Items: 121</li>
+        </ul>
+      </div>
+
+      <div class="top-products">
+        <h3>🔥 Top Selling Items</h3>
+        <p>🧥 Handmade Cotton: <strong>171 pcs</strong></p>
+        <p>👕 Custom Rompers: <strong>45 sets</strong></p>
+      </div>
+
+      <div class="sales-status">
+        <h3>🧾 Purchase & Sales Status</h3>
+        <p><strong>Quantity Ordered:</strong> 652.00</p>
+        <p>Draft: 0</p>
+        <p>Confirmed: 50</p>
+        <p>Packed: 0</p>
+        <p>Shipped: 0</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot Icon -->
+  <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot">
+    <div class="chat-header">Aapki Suvidha 🤖</div>
+    <div class="chat-window">
+      <p><strong>Suvidha:</strong> Namaste Maddie! How can I help you today?</p>
+    </div>
+    <input type="text" placeholder="Type your message..." />
+  </div>
+
+</body>
+</html>
